@@ -35,5 +35,5 @@ func TestFetchDataError(t *testing.T) {
 
 	e := FetchData(&httpClient, 2)
 
-	assert.NotNil(t, e)
+	assert.Equal(t, "error: data not found", e.Error())
 }
