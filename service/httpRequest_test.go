@@ -44,5 +44,5 @@ func TestGetError(t *testing.T) {
 func TestGetError1(t *testing.T) {
 	_, err := HttpAPIClient.Get("123")
 
-	assert.NotNil(t, err)
+	assert.Equal(t, `Get "123": unsupported protocol scheme ""`, err.Error())
 }
